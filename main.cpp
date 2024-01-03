@@ -6,12 +6,12 @@
 
 class Point {
 public:
-    int _x, _y;
-    void Print(int x) const;
+    int x, y;
+    void Print() const;
 };
 
-void Point::Print(int x) const {
-    std::cout << "\n(" << _x << "," << _y << "," << x << ")\n";
+void Point::Print() const {
+    std::cout << "\n(" << x << "," << y << ")\n";
 }
 
 
@@ -25,13 +25,16 @@ int main() {
     // Address address = Address();
 
     Point pt1, pt2;
-    pt1._x = 100;
-    pt1._y = 100;
-    pt2._x = 200;
-    pt2._y = 200;
+    pt1.x = 100;
+    pt1.y = 100;
+    pt2.x = 200;
+    pt2.y = 200;
 
-    pt1.Print(150);
-    pt2.Print(250);
+    Point pt3 = pt1;
+    pt3.Print();
+
+    pt3 = pt2;
+    pt3.Print();
 
     return 0;
 }
