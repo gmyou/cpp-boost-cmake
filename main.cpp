@@ -7,10 +7,13 @@
 class Point {
 public:
     int x, y;
-    void Print() const {
-        std::cout << "\n(" << x << "," << y << ")\n";
-    };
+    void Print() const;
 };
+
+void Point::Print() const {
+    std::cout << "\n(" << x << "," << y << ")\n";
+}
+
 
 int main() {
     printf("Boost version: %d.%d.%d\n",
