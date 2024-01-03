@@ -10,4 +10,6 @@ if(Boost_FOUND)
     # include 패스 설정
     include_directories(${Boost_INCLUDE_DIRS})
 endif()
-add_executable(boost_test main.cpp)
+add_executable(boost_test main.cpp
+        src/Address.cpp
+        src/Address.h)
