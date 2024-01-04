@@ -7,11 +7,12 @@
 class Point {
 public:
     int x, y;
-    void Print() const;
+    void Print();
 };
 
-void Point::Print() const {
-    std::cout << "\n(" << x << "," << y << ")\n";
+void Point::Print() {
+    x = 50;
+    y = 150;
 }
 
 
@@ -24,17 +25,8 @@ int main() {
     // todo 잠시 미루자
     // Address address = Address();
 
-    Point pt1, pt2;
-    pt1.x = 100;
-    pt1.y = 100;
-    pt2.x = 200;
-    pt2.y = 200;
-
-    Point pt3 = pt1;
-    pt3.Print();
-
-    pt3 = pt2;
-    pt3.Print();
+    Point pt;
+    pt.Print();
 
     return 0;
 }
